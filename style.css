@@ -1,0 +1,32 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+/* font-family: 'Josefin Sans', sans-serif;  300,400,600*/
+
+
+/* Global Variables */
+:root{
+    --clr-d-red:hsl(0, 36%, 70%);
+    --clr-soft-red:hsl(0, 93%, 68%);
+    --clr-grayish-red:hsl(0, 6%, 24%);
+    --clr-gradients-1:Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+    --clr-gradients-2:Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+    --ff-primary:'Josefin Sans', sans-serif;
+    --radius:0.5rem
+}
+
+/* Global Styles */
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-size: 16px;
+    font-family: var(--ff-primary);
+}
