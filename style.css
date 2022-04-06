@@ -29,126 +29,204 @@ a{
 body{
     font-size: 16px;
     font-family: var(--ff-primary);
+    background: linear-gradient(135deg, hsl(0, 0%, 100%),hsl(0, 100%, 98%));
 }
 img:not(.logo){
     width: 100%;
 }
 /* Section */
-.logo-img{
+.section{
+    min-height: 100vh;
+}
+.left{
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-size: cover;
+    background-position: center center;
+}
+.logo{
     margin: 2rem;
 }
-.image{
+.hero-mobile{
     margin-bottom: 4rem;
 }
-.hero-mobile{
-    width: 100%;
-}
-/* Text Area */
 .title{
-    padding: 0 4rem;
+    text-transform:uppercase ;
+    margin: 0 4rem;
+    text-align: center;
     font-size: 3rem;
-    text-align: center;
-    text-transform: uppercase;
     letter-spacing: 8px;
-    color: var(--clr-grayish-red);
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-}
-.diff{
-    color:var(--clr-d-red) ;
-    font-weight: 200;
-}
-.info{
-    padding-left: 2rem;
-    padding-right:2rem ;
-    color: var(--clr-d-red);
-    text-align: center;
-   font-size: 0.875rem;
-    line-height: 1.5;
     margin-bottom: 2rem;
 }
-/* Input Line */
+.diff{
+    font-weight: 200;
+    color: var(--clr-d-red);
+}
+.info{
+    margin: 0 2rem;
+    text-align: center;
+    font-size: .875rem;
+    color: var(--clr-d-red);
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
 .email{
-    padding:0 2rem;
-    margin-bottom: 5.75rem;
+    margin: 0 2rem;
     display: flex;
+    justify-content: center;
 }
 .email-input{
-    overflow: visible;
-    padding: 1rem 5rem 1rem 1.5rem;
-    width:19.25rem ;
+    width: 100%;
+    padding: 1rem 1.5rem;
     border-radius: 1.5rem;
     border: 1px solid var(--clr-d-red);
+    background-color: transparent;
 }
 .email-input::placeholder{
     color: var(--clr-d-red);
-    font-size: 1rem;
 }
 .email-input:focus{
     outline: 0;
 }
-/* Button */
 .btn{
-    position: relative;
-    text-align: center;
-    padding: 12px 24px;
-    left: -40px;
-    border: 0;
-    border-radius: 1.5rem;
-    background-image:linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     cursor: pointer;
-    box-shadow: 5px 1px 10px var(--clr-soft-red);
+    border-radius: 1.5rem;
+    border: 0;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+    padding: 14px 28px;
+    position: relative;
+    left: -40px;
 }
 .btn i{
-    font-size: 1.5rem;
     color: white;
+    font-size:1.5rem ;
 }
-
 /* Responsive Design */
 
 /* Tablet */
 @media screen and (max-width:992px) and (min-width:600px) {
-   .image{
-       margin-top: 3.5rem;
-   }
+    .section{
+        min-height: 100vh;
+    }
+    .hero-mobile{
+        margin-bottom: 4rem;
+    }
     .title{
-       font-size: 4rem;
-       letter-spacing: 16px;
-   }
-   .diff{
-       white-space: pre-line;
-   }
-   .info{
-       font-size: 1rem;
-   }
-   .email{
-       justify-content: center;
-       align-items: center;
-   }
-   .email-input{
-       width: 25rem;
-   }
+        margin: 0 5rem;
+        font-size: 4rem;
+        letter-spacing: 1rem;
+        margin-bottom: 3rem;
+    }
+    .info{
+        font-size: 1.2rem;
+    }
+    .email{
+        margin-bottom: 6rem;
+    }
 }
-@media screen and (min-width:992px) {
+/* Desktop */
+@media screen and (min-width:992px) and (max-width:1280px){
+    html{
+        font-size: 14px;
+    }
+    .section{
+        display: flex;
+    }
+    .left{
+        width: 60%;
+    }
+    .container{
+        margin: 4rem 10.25rem;
+    }
     .hero-mobile{
         display: none;
     }
-    .hero-desktop{
-        display: block !important;
+    .logo{
+        margin-bottom: 7.75rem;
     }
-    .section-center{
+    .title{
+        font-size: 4rem;
+        text-align: start;
+        margin-left: 2rem !important;
+        margin-right: 18.75rem;
+        letter-spacing: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .diff{
+        text-align: center;
+    }
+    .info{
+        font-size: 1rem;
+        margin-right: 14.25rem;
+        text-align: start;
+        margin-left: 2rem !important;
+        margin-bottom: 40px;
+    }
+    .email{
+        justify-content: flex-start
+    }
+    .email-input{
+        justify-content: left;
+        margin-left: 0!important;
+        max-width:450px ;
+    }
+    .right{
+        width: 40%;
+    }
+    .bg-desktop{
+        background-image: url(images/hero-desktop.jpg);
+    background-size: cover;
+    background-position: center center;
+    }
+}
+/* High screen Desktop */
+@media screen and (min-width:1280px) {
+    .section{
         display: flex;
     }
-    .col-1-logo{
+    .left{
         width: 60%;
-        height: 10%;
     }
-    .col-1{
-        width: 60%;
-        height: 90%;
+    .container{
+        margin: 4rem 10.25rem;
     }
-    .col-2{
+    .hero-mobile{
+        display: none;
+    }
+    .logo{
+        margin-bottom: 7.75rem;
+    }
+    .title{
+        font-size: 4rem;
+        text-align: start;
+        margin-left: 2rem !important;
+        margin-right: 18.75rem;
+        letter-spacing: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .diff{
+        text-align: center;
+    }
+    .info{
+        font-size: 1rem;
+        margin-right: 14.25rem;
+        text-align: start;
+        margin-left: 2rem !important;
+        margin-bottom: 40px;
+    }
+    .email{
+        justify-content: flex-start
+    }
+    .email-input{
+        justify-content: left;
+        margin-left: 0!important;
+        max-width:450px ;
+    }
+    .right{
         width: 40%;
-        height: 100%;
+    }
+    .bg-desktop{
+        background-image: url(images/hero-desktop.jpg);
+    background-size: cover;
+    background-position: center center;
     }
 }
