@@ -30,3 +30,125 @@ body{
     font-size: 16px;
     font-family: var(--ff-primary);
 }
+img:not(.logo){
+    width: 100%;
+}
+/* Section */
+.logo-img{
+    margin: 2rem;
+}
+.image{
+    margin-bottom: 4rem;
+}
+.hero-mobile{
+    width: 100%;
+}
+/* Text Area */
+.title{
+    padding: 0 4rem;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: var(--clr-grayish-red);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+.diff{
+    color:var(--clr-d-red) ;
+    font-weight: 200;
+}
+.info{
+    padding-left: 2rem;
+    padding-right:2rem ;
+    color: var(--clr-d-red);
+    text-align: center;
+   font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+/* Input Line */
+.email{
+    padding:0 2rem;
+    margin-bottom: 5.75rem;
+    display: flex;
+}
+.email-input{
+    overflow: visible;
+    padding: 1rem 5rem 1rem 1.5rem;
+    width:19.25rem ;
+    border-radius: 1.5rem;
+    border: 1px solid var(--clr-d-red);
+}
+.email-input::placeholder{
+    color: var(--clr-d-red);
+    font-size: 1rem;
+}
+.email-input:focus{
+    outline: 0;
+}
+/* Button */
+.btn{
+    position: relative;
+    text-align: center;
+    padding: 12px 24px;
+    left: -40px;
+    border: 0;
+    border-radius: 1.5rem;
+    background-image:linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    cursor: pointer;
+    box-shadow: 5px 1px 10px var(--clr-soft-red);
+}
+.btn i{
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Responsive Design */
+
+/* Tablet */
+@media screen and (max-width:992px) and (min-width:600px) {
+   .image{
+       margin-top: 3.5rem;
+   }
+    .title{
+       font-size: 4rem;
+       letter-spacing: 16px;
+   }
+   .diff{
+       white-space: pre-line;
+   }
+   .info{
+       font-size: 1rem;
+   }
+   .email{
+       justify-content: center;
+       align-items: center;
+   }
+   .email-input{
+       width: 25rem;
+   }
+}
+@media screen and (min-width:992px) {
+    .hero-mobile{
+        display: none;
+    }
+    .hero-desktop{
+        display: block !important;
+    }
+    .section-center{
+        display: flex;
+    }
+    .col-1-logo{
+        width: 60%;
+        height: 10%;
+    }
+    .col-1{
+        width: 60%;
+        height: 90%;
+    }
+    .col-2{
+        width: 40%;
+        height: 100%;
+    }
+}
