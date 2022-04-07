@@ -87,6 +87,10 @@ img:not(.logo){
 .email-input:focus{
     outline: 0;
 }
+.border{
+    outline: 1;
+    border: 2px solid var(--clr-soft-red);
+}
 .btn{
     cursor: pointer;
     border-radius: 1.5rem;
@@ -99,6 +103,25 @@ img:not(.logo){
 .btn i{
     color: white;
     font-size:1.5rem ;
+}
+.error{
+    display: none;
+    color: var(--clr-soft-red);
+    margin: 10px 10%;
+    transition: all .5s linear;
+}
+.active{
+    transition: all .5s linear;
+    display: block !important;
+}
+.error-icon{
+    display: none;
+    position: absolute;
+    width:24px !important;
+    height: 24px;
+    margin-left: 12px;
+    margin-top: 12px;
+
 }
 /* Responsive Design */
 
@@ -119,8 +142,14 @@ img:not(.logo){
     .info{
         font-size: 1.2rem;
     }
-    .email{
+    .error{
+        display: none;
+        color: var(--clr-soft-red);
+        margin: 10px 10%;
         margin-bottom: 6rem;
+    }
+    .error-icon{
+        margin-left: 215px;
     }
 }
 /* Desktop */
@@ -177,6 +206,13 @@ img:not(.logo){
     background-size: cover;
     background-position: center center;
     }
+    .error{
+        display: none;
+    }
+    .error-icon{
+        margin-left: 256px;
+    }
+
 }
 /* High screen Desktop */
 @media screen and (min-width:1280px) {
@@ -228,5 +264,11 @@ img:not(.logo){
         background-image: url(images/hero-desktop.jpg);
     background-size: cover;
     background-position: center center;
+    }
+    .error{
+        display: none;
+    }
+    .error-icon{
+        margin-left: 360px;
     }
 }
