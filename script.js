@@ -7,6 +7,8 @@ function checkEmail(e){
         msg.classList.add('active');
         value.classList.add('border');
         iconError.classList.add('active');
+    }else if(validateEmail(value.value)){
+      value.value='';
     }
     setTimeout(deleteVal,2000);
     e.preventDefault();
